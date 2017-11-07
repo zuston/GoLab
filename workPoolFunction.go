@@ -17,6 +17,8 @@ func main(){
 		jobs <- (i)
 	}
 
+	close(jobs)
+
 	for i:=0;i<5 ;i++  {
 		value := <- tags
 		fmt.Println("tag finished ",value)
